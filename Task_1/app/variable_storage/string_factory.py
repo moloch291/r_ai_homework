@@ -6,6 +6,8 @@ MAIN_MENU_HEADER = "\nWelcome!\nPlease select from the following options:"
 MAIN_MENU_OPTIONS = """\n1: See average price per neighbourhood groups!
 2: See unique values in 'host response time'!\n3: See the average price of the listing that has the most reviews!
 4: See the count of listings per ‘has_coffee_maker’ attribute!\n"""
+ASK_FOR_ENTER = "Press 'enter' to continue..."
+RESULT_HEADER = "The result of this task is:\n"
 
 # ASCII:
 LOGO = """######                                               #    ###       #     #                                                  
