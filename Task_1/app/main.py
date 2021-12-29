@@ -1,13 +1,17 @@
 from variable_storage import string_factory as str_f
 from interact.Input import Input
 from interact.Display import Display
-from Task_1.app.database_handler.data_handler.PriceGetter import PriceGetter
+from Task_1.app.database_handler.data_handlers.PriceGetter import PriceGetter
 
 
 def evaluate(user_choice):
-    if user_choice == 1:
-        result = PriceGetter.test_query()
-        return result
+    switch = {
+        1: PriceGetter.test_query(),
+        2: 'Another result...',
+        3: 'Another result...',
+        4: 'And another....'
+    }
+    return switch.get(user_choice, "Invalid choice!")
 
 
 def main():
