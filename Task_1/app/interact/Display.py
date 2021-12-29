@@ -1,9 +1,14 @@
+import os
 import sys
 sys.path.append("..")
 from variable_storage import string_factory as str_f
 
 
 class Display:
+
+    @staticmethod
+    def clean_console():
+        os.system('cls' if os.name == 'nt' else 'clear')
 
     @staticmethod
     def display_main_menu():

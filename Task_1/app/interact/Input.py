@@ -1,5 +1,5 @@
-import os
 import sys
+from .Display import Display
 # Get unique strings:
 sys.path.append("..")
 from variable_storage import string_factory as str_f
@@ -12,7 +12,7 @@ class Input:
         try:
             return int(input(message))
         except ValueError:
-            Input.clean_console()
+            Display.clean_console()
             print(str_f.TYPE_ERROR_INT_MENU)
             return Input.ask_for_int(message)
 
@@ -21,10 +21,6 @@ class Input:
         try:
             return str(input(message))
         except ValueError:
-            Input.clean_console()
+            Display.clean_console()
             print("Please provide text input!")
             Input.ask_for_string(message)
-
-    @staticmethod
-    def clean_console():
-        os.system('cls' if os.name == 'nt' else 'clear')

@@ -12,6 +12,13 @@ def exit_program():
     sys.exit(0)
 
 
+def reload():
+    enter = Input.ask_for_string(str_f.ASK_FOR_ENTER)
+    if enter == "":
+        main()
+    reload()
+
+
 def evaluate(user_choice):
     switch = {
         1: PriceGetter.test_query(),
@@ -33,13 +40,6 @@ def main():
     reload()
 
 
-def reload():
-    enter = Input.ask_for_string(str_f.ASK_FOR_ENTER)
-    if enter == "":
-        main()
-    reload()
-
-
 if __name__ == "__main__":
-    Input.clean_console()
+    Display.clean_console()
     main()
