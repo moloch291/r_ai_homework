@@ -6,6 +6,5 @@ class PriceGetter:
     @staticmethod
     @connection_handler
     def test_query(cursor):
-        query = "SELECT * FROM neighbourhood;"
-        cursor.execute(query)
+        cursor.execute("SELECT * FROM neighbourhood;")
         return cursor.fetchall()

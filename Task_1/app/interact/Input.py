@@ -1,7 +1,6 @@
 import os
 import sys
-
-# Get strings:
+# Get unique strings:
 sys.path.append("..")
 from variable_storage import string_factory as str_f
 
