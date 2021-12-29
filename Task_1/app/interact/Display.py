@@ -7,8 +7,4 @@ class Display:
 
     @staticmethod
     def display_main_menu():
-        print(
-            str_f.LOGO,
-            "\n",
-            str_f.MAIN_MENU_HEADER
-        )
+        print(str_f.LOGO, "\n", str_f.MAIN_MENU_HEADER)

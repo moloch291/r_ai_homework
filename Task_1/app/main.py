@@ -1,6 +1,10 @@
+import sys
+
 from variable_storage import string_factory as str_f
 from interact.Input import Input
 from interact.Display import Display
+locate_python = sys.exec_prefix
+print(locate_python)
 
 
 def main():
