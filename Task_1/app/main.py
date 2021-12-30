@@ -21,11 +21,11 @@ def reload():
 
 def evaluate(user_choice):
     switch = {
-        1: PriceGetter.test_query(),
+        1: PriceGetter.get_avg_per_neighbourhood(),
         2: 'Another result...',
         3: 'Another result...',
         4: 'And another....',
-        5: exit_program()
+        5: 'Exit'
     }
     return switch.get(user_choice, "Invalid choice!")
 
@@ -35,8 +35,7 @@ def main():
     Display.display_main_menu()
     user_choice = Input.ask_for_int(str_f.MAIN_MENU_OPTIONS)
     # Obtaining and presenting the data:
-    result = evaluate(user_choice)
-    Display.present_result(result)
+    evaluate(user_choice)
     reload()
 
 

@@ -15,12 +15,13 @@ class Display:
         print(str_f.LOGO, "\n", str_f.MAIN_MENU_HEADER)
 
     @staticmethod
-    def present_result(result):
+    def present_result(result, search_key=None):
         print(str_f.RESULT_HEADER, "\n")
         line_number = 1
         output = ""
         for line in result:
-            output += f"{str(line_number)}: {str(line)}"
+            output += f"""{str(line_number)}: {
+                str(line[search_key] if search_key is not None else line)
+            }\n"""
             line_number += 1
-        output += "\n"
         print(output)
