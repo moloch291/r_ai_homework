@@ -4,7 +4,8 @@ from variable_storage import string_factory as str_f
 from interact.Input import Input
 from interact.Display import Display
 from database_handler.data_handlers.PriceGetter import PriceGetter
-
+from database_handler.data_handlers.ResponseTimeGetter import ResponseTimeGetter
+from database_handler.data_handlers.CoffeeMakerGetter import CoffeeMakerGetter
 
 def exit_program():
     print(str_f.GOOD_BYE_MESSAGE)
@@ -20,14 +21,16 @@ def reload():
 
 
 def evaluate(user_choice):
-    switch = {
-        1: PriceGetter.get_avg_per_neighbourhood(),
-        2: 'Another result...',
-        3: 'Another result...',
-        4: 'And another....',
-        5: 'Exit'
-    }
-    return switch.get(user_choice, "Invalid choice!")
+    if user_choice == 1:
+        PriceGetter.get_avg_per_neighbourhood()
+    elif user_choice == 2:
+        ResponseTimeGetter.get_unique_values_of_host_response_time()
+    elif user_choice == 3:
+        PriceGetter.get_avg_for_most_reviewed()
+    elif user_choice == 4:
+        CoffeeMakerGetter.count_props_with_coffee_maker()
+    elif user_choice == 5:
+        exit_program()
 
 
 def main():

@@ -9,6 +9,10 @@ from variable_storage import string_factory as str_f
 class PriceGetter:
 
     @staticmethod
+    def get_avg_for_most_reviewed():
+        return None
+
+    @staticmethod
     def get_avg_per_neighbourhood():
         neighbourhood_groups = PriceGetter.get_neighbourhood_groups()
         Display.clean_console()
